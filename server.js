@@ -4,6 +4,7 @@ let cors = require('cors')
 let path = require('path')
 require('dotenv').config()
 
+mongoose.set('strictQuery',false);
 mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.ejmaaoq.mongodb.net/LibraryDB`,
 {
     useNewUrlParser: true,
