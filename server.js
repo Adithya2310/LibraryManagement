@@ -4,7 +4,7 @@ let cors = require('cors')
 let path = require('path')
 require('dotenv').config()
 
-mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.ejmaaoq.mongodb.net/LibraryDB`,
+mongoose.connect(`mongodb+srv://adithya_n_g:Alluarjunfan@cluster0.ejmaaoq.mongodb.net/LibraryDB`,
 {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -35,7 +35,7 @@ if (process.env.NODE_ENV === 'production') {
     })
 }
 
-const port=5000;
+const port=process.env.PORT || 5000;
 
 const server=app.listen(port,()=>{
     console.log("listening on port "+port);
